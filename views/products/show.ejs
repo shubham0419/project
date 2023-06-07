@@ -1,0 +1,21 @@
+<% layout("layout/boilerplate") -%>
+ 
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card" style="width: 18rem">
+            <img src="<%= product.img %>" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title"><%= product.name %></h5>
+              <p class="card-text"><%= product.desc %></p>
+              <h5><%= product.price %></h5>
+              <a href="/products/<%= product._id %>/edit">edit</a>
+              <form method="post" action="/products/<%= product._id %>?_method=DELETE">
+                <button>Delete</button>
+              </form>
+            </div>
+          </div>
+    </div>
+    <div class="col-lg-6">
+        <h1>Review</h1>
+    </div>
+</div>
